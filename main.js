@@ -61,7 +61,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<nav>\n  <div class=\"nav-wrapper\">\n    <a [routerLink]=\"['/home']\" class=\"brand-logo\">Music App</a>\n    <ul class=\"sidenav\">\n      <a href=\"#\" data-activates=\"mobile\" class=\"button-collapse\"\n        ><i class=\"material-icons\">menu</i></a\n      >\n      <ul class=\"right hide-on-med-and-down\">\n        <li><a [routerLink]=\"['/home']\" routerLinkActive=\"active\">Home</a></li>\n        <li>\n          <a [routerLink]=\"['/search']\" routerLinkActive=\"active\">Search</a>\n        </li>\n        <li>\n          <a [routerLink]=\"['/artist']\" routerLinkActive=\"active\">Artist</a>\n        </li>\n      </ul>\n    </ul>\n  </div>\n</nav>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<nav>\n  <div class=\"nav-wrapper\">\n    <a href='#' class=\"brand-logo\">Music App</a>\n    <a href=\"#\" data-target=\"mobile-nav\" class=\"sidenav-trigger\"\n      ><i class=\"material-icons\">menu</i></a\n    >\n    <ul class=\"right hide-on-med-and-down\">\n      <li><a [routerLink]=\"['/home']\" routerLinkActive=\"active\">Home</a></li>\n      <li>\n        <a [routerLink]=\"['/search']\" routerLinkActive=\"active\">Search</a>\n      </li>\n      <li>\n        <a [routerLink]=\"['/artist']\" routerLinkActive=\"active\">Artist</a>\n      </li>\n    </ul>\n  </div>\n</nav>\n\n<ul class=\"sidenav\" id=\"mobile-nav\">\n  <li><a [routerLink]=\"['/home']\" routerLinkActive=\"active\">Home</a></li>\n  <li>\n    <a [routerLink]=\"['/search']\" routerLinkActive=\"active\">Search</a>\n  </li>\n  <li>\n    <a [routerLink]=\"['/artist']\" routerLinkActive=\"active\">Artist</a>\n  </li>\n</ul>\n");
 
 /***/ }),
 
@@ -155,7 +155,14 @@ var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'app';
     }
-    AppComponent.prototype.ngOnInit = function () { };
+    AppComponent.prototype.ngOnInit = function () {
+        console.log('firing');
+        $(document).ready(function () {
+            console.log('firing2');
+            $('.sidenav').sidenav();
+            console.log('fired');
+        });
+    };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
@@ -184,17 +191,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var angular2_materialize__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! angular2-materialize */ "./node_modules/angular2-materialize/dist/index.js");
-/* harmony import */ var _app_routes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.routes */ "./src/app/app.routes.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
-/* harmony import */ var _components_artist_artist_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/artist/artist.component */ "./src/app/components/artist/artist.component.ts");
-/* harmony import */ var _components_search_search_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/search/search.component */ "./src/app/components/search/search.component.ts");
-/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/app/components/navbar/navbar.component.ts");
-/* harmony import */ var _pipes_noimage_pipe__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pipes/noimage.pipe */ "./src/app/pipes/noimage.pipe.ts");
-/* harmony import */ var _components_card_card_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/card/card.component */ "./src/app/components/card/card.component.ts");
-/* harmony import */ var _components_preloader_preloader_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/preloader/preloader.component */ "./src/app/components/preloader/preloader.component.ts");
-/* harmony import */ var _pipes_domsafe_pipe__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pipes/domsafe.pipe */ "./src/app/pipes/domsafe.pipe.ts");
+/* harmony import */ var _app_routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.routes */ "./src/app/app.routes.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
+/* harmony import */ var _components_artist_artist_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/artist/artist.component */ "./src/app/components/artist/artist.component.ts");
+/* harmony import */ var _components_search_search_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/search/search.component */ "./src/app/components/search/search.component.ts");
+/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/app/components/navbar/navbar.component.ts");
+/* harmony import */ var _pipes_noimage_pipe__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pipes/noimage.pipe */ "./src/app/pipes/noimage.pipe.ts");
+/* harmony import */ var _components_card_card_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/card/card.component */ "./src/app/components/card/card.component.ts");
+/* harmony import */ var _components_preloader_preloader_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/preloader/preloader.component */ "./src/app/components/preloader/preloader.component.ts");
+/* harmony import */ var _pipes_domsafe_pipe__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pipes/domsafe.pipe */ "./src/app/pipes/domsafe.pipe.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -217,31 +223,29 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
-
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
-                _components_home_home_component__WEBPACK_IMPORTED_MODULE_6__["HomeComponent"],
-                _components_artist_artist_component__WEBPACK_IMPORTED_MODULE_7__["ArtistComponent"],
-                _components_search_search_component__WEBPACK_IMPORTED_MODULE_8__["SearchComponent"],
-                _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_9__["NavbarComponent"],
-                _pipes_noimage_pipe__WEBPACK_IMPORTED_MODULE_10__["NoimagePipe"],
-                _components_card_card_component__WEBPACK_IMPORTED_MODULE_11__["CardComponent"],
-                _components_preloader_preloader_component__WEBPACK_IMPORTED_MODULE_12__["PreloaderComponent"],
-                _pipes_domsafe_pipe__WEBPACK_IMPORTED_MODULE_13__["DomsafePipe"]
+                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
+                _components_home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"],
+                _components_artist_artist_component__WEBPACK_IMPORTED_MODULE_6__["ArtistComponent"],
+                _components_search_search_component__WEBPACK_IMPORTED_MODULE_7__["SearchComponent"],
+                _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_8__["NavbarComponent"],
+                _pipes_noimage_pipe__WEBPACK_IMPORTED_MODULE_9__["NoimagePipe"],
+                _components_card_card_component__WEBPACK_IMPORTED_MODULE_10__["CardComponent"],
+                _components_preloader_preloader_component__WEBPACK_IMPORTED_MODULE_11__["PreloaderComponent"],
+                _pipes_domsafe_pipe__WEBPACK_IMPORTED_MODULE_12__["DomsafePipe"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
-                angular2_materialize__WEBPACK_IMPORTED_MODULE_3__["MaterializeModule"],
-                _app_routes__WEBPACK_IMPORTED_MODULE_4__["APP_ROUTING"]
+                _app_routes__WEBPACK_IMPORTED_MODULE_3__["APP_ROUTING"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
