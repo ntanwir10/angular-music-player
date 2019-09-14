@@ -1,0 +1,19 @@
+<nav>
+  <div class="nav-wrapper">
+    <a [routerLink]="['/home']" class="brand-logo">Music App</a>
+    <ul class="sidenav">
+      <a href="#" data-activates="mobile" class="button-collapse"
+        ><i class="material-icons">menu</i></a
+      >
+      <ul class="right hide-on-med-and-down">
+        <li><a [routerLink]="['/home']" routerLinkActive="active">Home</a></li>
+        <li>
+          <a [routerLink]="['/search']" routerLinkActive="active">Search</a>
+        </li>
+        <li>
+          <a [routerLink]="['/artist']" routerLinkActive="active">Artist</a>
+        </li>
+      </ul>
+    </ul>
+  </div>
+</nav>

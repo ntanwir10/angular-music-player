@@ -1,0 +1,18 @@
+<div class="home-container animated fadeIn">
+	<div class="row">
+		<div class="col s12 m4 l3" *ngFor="let x of items">
+			<div class="card large">
+				<div class="card-image pointer">
+					<a target="_blank" (click)="seeDetails(x)"><img [src]="x.images | noimage"></a>
+				</div>
+				<div class="card-content">
+					<span class="card-title black-text">{{x.name}}</span>
+					<p class="light">{{x.release_date}}</p>
+				</div>
+				<div class="card-action center">
+					<div class="chip" *ngFor="let y of x.artists">
+					{{y.name}}
+					</div>
+				</div>
+	</div>
+</div>

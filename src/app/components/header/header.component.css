@@ -1,0 +1,19 @@
+.full-width {
+	background-size: 100% auto;
+	background-color: #231e32;
+}
+
+.btn {
+	padding-top: 10px;
+	height: 60px;
+	width: 160px ;
+	border-radius: 30px;
+	text-decoration: none;
+	color: #fff;
+	background-color: #272728;
+	text-align: center;
+	letter-spacing: .5px;
+	transition: .2s ease-out;
+	cursor: pointer;
+	font-size: 17px;
+}

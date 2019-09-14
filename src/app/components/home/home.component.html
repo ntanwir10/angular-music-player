@@ -1,0 +1,8 @@
+<app-navbar></app-navbar>
+
+<app-preloader [name]="'Searching new releases...'" *ngIf="preloading"></app-preloader>
+<div class="container center animated shake" *ngIf="error">
+	<i class="material-icons md-164">error_outline</i>
+	<h3 class="error">{{message}}</h3>
+</div>
+<app-card [items] = "newReleases"></app-card>

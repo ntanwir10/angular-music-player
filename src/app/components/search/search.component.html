@@ -1,0 +1,26 @@
+<div>
+	<div class="section no-pad-bot" id="top">
+		<div class="container ">
+			<h1 class="white-text animated fadeIn">Find out a thousand of artists!</h1>
+			<h4 class="light white-text animated fadeIn valign-wrapper "><i class="material-icons md-36 hide-on-small-only">search</i>Type and press enter to look for an artist.</h4>
+			<br>
+		</div>
+	</div>
+	<app-navbar></app-navbar>
+</div>
+
+<div class="container" id="search-container">
+	<nav>
+		<div class="nav-wrapper grey lighten-5">
+			<form onsubmit="return false">
+				<div class="input-field">
+					<input id="search" type="search" required placeholder="Let's find artists..." (keyup.enter)="searchArtist(inputSearchArtist.value)" #inputSearchArtist>
+					<label class="label-icon" for="search"><i class="material-icons grey-text">search</i></label>
+					<i class="material-icons">close</i>
+				</div>
+			</form>
+		</div>
+	</nav>
+</div>
+
+<app-card [items]="artists"></app-card>
