@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"section no-pad-bot valign-wrapper\" id=\"top\">\n\t<div class=\"container center \">\n\t\t<h1 class=\"white-text animated fadeIn \">{{artist.name}}</h1>\n\t\t<br>\n\t</div>\n</div>\n<app-navbar></app-navbar>\n<br>\n<br>\n<br>\n<app-preloader [name]=\"'Loading artist...'\" *ngIf=\"preloading\"></app-preloader>\n<div class=\"container animated fadeIn\" *ngIf=\"!preloader\">\n\t<div class=\"row\">\n\t\t<div class=\"col l4 m6 s12\">\n\t\t\t<img [src]=\"artist.images | noimage\" width=\"100%\">\n\t\t</div>\n\t\t<div class=\"col l8 m6 s12\">\n\t\t\t<h6>Artist: <span class=\"light\">{{artist.name}}</span></h6>\n\t\t\t<h6>Type: <span class=\"light\">{{artist.type}}</span></h6>\n\t\t\t<h6>Popularity: <span class=\"light\">{{artist.popularity}}</span></h6>\n\t\t\t<h6>Followers: <span class=\"light\">{{artist.followers?.total | number}}</span></h6>\n\t\t\t<h6>Genres: <div class=\"chip\" *ngFor=\"let x of artist.genres\">{{x}}</div></h6>\n\t\t</div>\n\t</div>\n\t<div class=\"row center\">\n\t\t<div class=\"divider\"></div>\n\t\t<br>\n\t\t<a href=\"{{artist.external_urls?.spotify}}\" target=\"_blank\">Open in Spotify</a>\n\t</div>\n</div>\n<br>\n<section id=\"top-tracks\" >\n\t<h2 class=\"center white-text\" id=\"title\">Top tracks of {{artist.name}}</h2>\n\t<div class=\"home-container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col s12 m6\" *ngFor=\"let x of topTracks\">\n\t\t\t<div class=\"card horizontal \">\n\t\t\t\t<div class=\"card-image\">\n\t\t\t\t\t<img [src]=\"x.album.images | noimage\" height=\"100%\" width=\"100%\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"card-stacked\">\n\t\t\t\t\t<div class=\"card-content\">\n\t\t\t\t\t\t<span class=\"card-title black-text\">{{x.name}}</span>\n\t\t\t\t\t\t<p>{{x.album.release_date | date}}</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-action\">\n\t\t\t\t\t\t<iframe [src]=\"x.uri | domsafe:'https://open.spotify.com/embed?uri='\" width=\"100%\" height=\"80px\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<style>\n#top-tracks{\n\tbackground-image: linear-gradient(#080b0d, #384b5e);\n}\n\n#title{\n\tpadding-top: 50px;\n}\n</style>\n\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navbar></app-navbar>\n<div class=\"section no-pad-bot valign-wrapper\" id=\"top\">\n\t<div class=\"container center \">\n\t\t<h1 class=\"white-text animated fadeIn \">{{artist.name}}</h1>\n\t\t<br>\n\t</div>\n</div>\n\n<app-preloader [name]=\"'Loading artist...'\" *ngIf=\"preloading\"></app-preloader>\n<div class=\"container animated fadeIn\" *ngIf=\"!preloader\">\n\t<div class=\"row\">\n\t\t<div class=\"col l4 m6 s12\">\n\t\t\t<img [src]=\"artist.images | noimage\" width=\"100%\">\n\t\t</div>\n\t\t<div class=\"col l8 m6 s12\">\n\t\t\t<h6>Artist: <span class=\"light\">{{artist.name}}</span></h6>\n\t\t\t<h6>Type: <span class=\"light\">{{artist.type}}</span></h6>\n\t\t\t<h6>Popularity: <span class=\"light\">{{artist.popularity}}</span></h6>\n\t\t\t<h6>Followers: <span class=\"light\">{{artist.followers?.total | number}}</span></h6>\n\t\t\t<h6>Genres: <div class=\"chip\" *ngFor=\"let x of artist.genres\">{{x}}</div></h6>\n\t\t</div>\n\t</div>\n\t<div class=\"row center\">\n\t\t<div class=\"divider\"></div>\n\t\t<br>\n\t\t<a href=\"{{artist.external_urls?.spotify}}\" target=\"_blank\">Open in Spotify</a>\n\t</div>\n</div>\n<br>\n<section id=\"top-tracks\" >\n\t<h2 class=\"center white-text\" id=\"title\">Top tracks of {{artist.name}}</h2>\n\t<div class=\"home-container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col s12 m6\" *ngFor=\"let x of topTracks\">\n\t\t\t<div class=\"card horizontal \">\n\t\t\t\t<div class=\"card-image\">\n\t\t\t\t\t<img [src]=\"x.album.images | noimage\" height=\"100%\" width=\"100%\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"card-stacked\">\n\t\t\t\t\t<div class=\"card-content\">\n\t\t\t\t\t\t<span class=\"card-title black-text\">{{x.name}}</span>\n\t\t\t\t\t\t<p>{{x.album.release_date | date}}</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-action\">\n\t\t\t\t\t\t<iframe [src]=\"x.uri | domsafe:'https://open.spotify.com/embed?uri='\" width=\"100%\" height=\"80px\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<style>\n#top-tracks{\n\tbackground-image: linear-gradient(#080b0d, #384b5e);\n}\n\n#title{\n\tpadding-top: 50px;\n}\n</style>\n\n\n");
 
 /***/ }),
 
@@ -537,7 +537,7 @@ var HomeComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("nav .nav-wrapper {\n\tbackground-color: #040302;\n}\n\nnav {\n\theight: 70px !important;\n\tline-height: 70px !important;\n}\n\n/*To center nav elements*/\n\nnav.nav-center ul li {\n    display: inline;\n    float: none;\n}\n\nnav.nav-center ul li a {\n    display: inline-block;\n}\n\n.active{\n\tborder-bottom: 5px solid #1db954;\n\n}\n\nnav .brand-logo {\n  padding-left: 10px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Q0FDQyx5QkFBeUI7QUFDMUI7O0FBRUE7Q0FDQyx1QkFBdUI7Q0FDdkIsNEJBQTRCO0FBQzdCOztBQUVBLHlCQUF5Qjs7QUFDekI7SUFDSSxlQUFlO0lBQ2YsV0FBVztBQUNmOztBQUNBO0lBQ0kscUJBQXFCO0FBQ3pCOztBQUVBO0NBQ0MsZ0NBQWdDOztBQUVqQzs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbmF2YmFyL25hdmJhci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsibmF2IC5uYXYtd3JhcHBlciB7XG5cdGJhY2tncm91bmQtY29sb3I6ICMwNDAzMDI7XG59XG5cbm5hdiB7XG5cdGhlaWdodDogNzBweCAhaW1wb3J0YW50O1xuXHRsaW5lLWhlaWdodDogNzBweCAhaW1wb3J0YW50O1xufVxuXG4vKlRvIGNlbnRlciBuYXYgZWxlbWVudHMqL1xubmF2Lm5hdi1jZW50ZXIgdWwgbGkge1xuICAgIGRpc3BsYXk6IGlubGluZTtcbiAgICBmbG9hdDogbm9uZTtcbn1cbm5hdi5uYXYtY2VudGVyIHVsIGxpIGEge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbn1cblxuLmFjdGl2ZXtcblx0Ym9yZGVyLWJvdHRvbTogNXB4IHNvbGlkICMxZGI5NTQ7XG5cbn1cblxubmF2IC5icmFuZC1sb2dvIHtcbiAgcGFkZGluZy1sZWZ0OiAxMHB4O1xufVxuIl19 */");
+/* harmony default export */ __webpack_exports__["default"] = ("nav .nav-wrapper {\n  background-color: #040302;\n}\n\nnav {\n  height: 70px !important;\n  line-height: 70px !important;\n}\n\n/*To center nav elements*/\n\nnav.nav-center ul li {\n  display: inline;\n  float: none;\n}\n\nnav.nav-center ul li a {\n  display: inline-block;\n}\n\n.active {\n  border-bottom: 5px solid #1db954;\n  position: relative;\n  bottom: 4px;\n}\n\nnav .brand-logo {\n  padding-left: 10px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSx5QkFBeUI7QUFDM0I7O0FBRUE7RUFDRSx1QkFBdUI7RUFDdkIsNEJBQTRCO0FBQzlCOztBQUVBLHlCQUF5Qjs7QUFDekI7RUFDRSxlQUFlO0VBQ2YsV0FBVztBQUNiOztBQUNBO0VBQ0UscUJBQXFCO0FBQ3ZCOztBQUVBO0VBQ0UsZ0NBQWdDO0VBQ2hDLGtCQUFrQjtFQUNsQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL25hdmJhci9uYXZiYXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIm5hdiAubmF2LXdyYXBwZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDQwMzAyO1xufVxuXG5uYXYge1xuICBoZWlnaHQ6IDcwcHggIWltcG9ydGFudDtcbiAgbGluZS1oZWlnaHQ6IDcwcHggIWltcG9ydGFudDtcbn1cblxuLypUbyBjZW50ZXIgbmF2IGVsZW1lbnRzKi9cbm5hdi5uYXYtY2VudGVyIHVsIGxpIHtcbiAgZGlzcGxheTogaW5saW5lO1xuICBmbG9hdDogbm9uZTtcbn1cbm5hdi5uYXYtY2VudGVyIHVsIGxpIGEge1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG59XG5cbi5hY3RpdmUge1xuICBib3JkZXItYm90dG9tOiA1cHggc29saWQgIzFkYjk1NDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBib3R0b206IDRweDtcbn1cblxubmF2IC5icmFuZC1sb2dvIHtcbiAgcGFkZGluZy1sZWZ0OiAxMHB4O1xufVxuIl19 */");
 
 /***/ }),
 
@@ -689,12 +689,10 @@ var SearchComponent = /** @class */ (function () {
         this._spotifyService = _spotifyService;
         this.artists = [];
     }
-    SearchComponent.prototype.ngOnInit = function () {
-    };
+    SearchComponent.prototype.ngOnInit = function () { };
     SearchComponent.prototype.searchArtist = function (txt) {
         var _this = this;
-        this._spotifyService.getArtist(txt)
-            .subscribe(function (data) {
+        this._spotifyService.getArtist(txt).subscribe(function (data) {
             _this.artists = data;
         });
     };
@@ -846,17 +844,17 @@ var SpotifyService = /** @class */ (function () {
         this._http = _http;
         this.url = 'https://api.spotify.com/v1/';
         this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
-            Authorization: 'Bearer BQCthdh7yWST13GIge0wXLYFQG09BjoXoI3IeC2CC8gnxZSIP6R2563NX2SFp1yKTSXC7Tc4U_-hcqO5ll5gbn5UNxWe_KIo44Lx_fYfEsJS_K2W6orTUgVDK1n3ZKXfFPaFQb1ZhWItUhpCh_I7JscHiVEXlWOR8US7DX5j6EOZ4upjgaYkkIMxvt4GelKPfjkvLmyNgvlh7x1E_Rvjss8ev-8IhQmHYAKhnAE0p4gofOdPiQh1FadxFPdwT1Y6jBMuqx5Nkw'
+            Authorization: 'Bearer BQCUaCDF-fBa75WpXcEbJ-17C_U5C5NC2eSkEoqFLftArST4Dx5D7v0BfCs5YGyowNf00RoDI1twLwVuWGVOA_l1nY8qQt07PVwrkaKFq-S3S3UxYOjOKDhPumP8E90nb9nKA4m_HYYoP7RyM13Z8ncxTaYj9daOYb-etCknVavvTmTYZUWst4qlmJ6OcOnsgIYTFACtEU7XfRP1D_4cYZw24dSljBPimsngkj-L7iJ1X2RzioerzSgCRwg-ptay5SFMTnghUg'
         });
     }
     SpotifyService.prototype.getNewReleases = function () {
         return this._http
-            .get(this.url + "browse/new-releases?country=US&offset=50", { headers: this.headers })
+            .get(this.url + "browse/new-releases", { headers: this.headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) { return data['albums'].items; }));
     };
     SpotifyService.prototype.getArtist = function (txt) {
         return this._http
-            .get(this.url + ("search?q=" + txt + "&type=artist&market=US&offset=10&limit="), { headers: this.headers })
+            .get(this.url + ("search?q=" + txt + "&type=artist&market=SV&offset=0&limit=20"), { headers: this.headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) { return data['artists'].items; }));
     };
     SpotifyService.prototype.getArtistById = function (id) {
