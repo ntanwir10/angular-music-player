@@ -1,24 +1,25 @@
 nav .nav-wrapper {
-	background-color: #040302;
+  background-color: #040302;
 }
 
 nav {
-	height: 70px !important;
-	line-height: 70px !important;
+  height: 70px !important;
+  line-height: 70px !important;
 }
 
 /*To center nav elements*/
 nav.nav-center ul li {
-    display: inline;
-    float: none;
+  display: inline;
+  float: none;
 }
 nav.nav-center ul li a {
-    display: inline-block;
+  display: inline-block;
 }
 
-.active{
-	border-bottom: 5px solid #1db954;
-
+.active {
+  border-bottom: 5px solid #1db954;
+  position: relative;
+  bottom: 4px;
 }
 
 nav .brand-logo {

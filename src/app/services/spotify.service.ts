@@ -8,23 +8,23 @@ import { map } from 'rxjs/operators';
 export class SpotifyService {
   constructor(private _http: HttpClient) {}
 
-  private url = 'https://api.spotify.com/v1/';
+  private url: string = 'https://api.spotify.com/v1/';
 
   private headers: HttpHeaders = new HttpHeaders({
     Authorization:
-      'Bearer BQANO4-Xlo09LmSFbAeXWLKoOrDXEhwLrQEoI8CnJqZ-Mq4Xu9klubbg4zLRbm40zcDcfAKjxJOFZXMFn-gA17tB3W62TwRH97er372smpah7QF3DtKEad3cbLVtfedsW6GKz-j9s_fDPtKmpaK5MRaVjJh59bwvasSBTHQUb9kDH_x1zQKhSzFWkuGXjhU96zkKUhXOOExWN5qDE0UOE_Ur1u0hK9_WB-zwI5OdfNQlLqr9igZff2yDnBpN2gR6SIXyrwSenQ'
+      'Bearer BQCUaCDF-fBa75WpXcEbJ-17C_U5C5NC2eSkEoqFLftArST4Dx5D7v0BfCs5YGyowNf00RoDI1twLwVuWGVOA_l1nY8qQt07PVwrkaKFq-S3S3UxYOjOKDhPumP8E90nb9nKA4m_HYYoP7RyM13Z8ncxTaYj9daOYb-etCknVavvTmTYZUWst4qlmJ6OcOnsgIYTFACtEU7XfRP1D_4cYZw24dSljBPimsngkj-L7iJ1X2RzioerzSgCRwg-ptay5SFMTnghUg'
   });
 
   getNewReleases() {
     return this._http
-      .get(this.url + `browse/new-releases?country=US&offset=50`, { headers: this.headers })
+      .get(this.url + `browse/new-releases`, { headers: this.headers })
       .pipe(map(data => data['albums'].items));
   }
 
   getArtist(txt: string) {
     return this._http
       .get(
-        this.url + `search?q=${txt}&type=artist&market=US&offset=10&limit=`,
+        this.url + `search?q=${txt}&type=artist&market=SV&offset=0&limit=20`,
         { headers: this.headers }
       )
       .pipe(map(data => data['artists'].items));

@@ -1,13 +1,11 @@
+<app-navbar></app-navbar>
 <div class="section no-pad-bot valign-wrapper" id="top">
 	<div class="container center ">
 		<h1 class="white-text animated fadeIn ">{{artist.name}}</h1>
 		<br>
 	</div>
 </div>
-<app-navbar></app-navbar>
-<br>
-<br>
-<br>
+
 <app-preloader [name]="'Loading artist...'" *ngIf="preloading"></app-preloader>
 <div class="container animated fadeIn" *ngIf="!preloader">
 	<div class="row">
