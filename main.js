@@ -848,7 +848,7 @@ var SpotifyService = /** @class */ (function () {
         this._http = _http;
         this.url = 'https://api.spotify.com/v1/';
         this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
-            Authorization: 'Bearer BQCUaCDF-fBa75WpXcEbJ-17C_U5C5NC2eSkEoqFLftArST4Dx5D7v0BfCs5YGyowNf00RoDI1twLwVuWGVOA_l1nY8qQt07PVwrkaKFq-S3S3UxYOjOKDhPumP8E90nb9nKA4m_HYYoP7RyM13Z8ncxTaYj9daOYb-etCknVavvTmTYZUWst4qlmJ6OcOnsgIYTFACtEU7XfRP1D_4cYZw24dSljBPimsngkj-L7iJ1X2RzioerzSgCRwg-ptay5SFMTnghUg'
+            Authorization: 'Bearer BQBxWuqjZ6v9DkMqUvqBjhNEJclS7rXphp0FnXv8p-9rivGOJJcJxDaBf0APHMrhdj-E0cdnYlY86m-D86CWmkRz1mAz0x2ik6P9h3fdu4kyPdXoBeE5XIlmBzfD4_D7NFneZREX4Aax0-Hhr9hj9D9DjtwEkcZEwWc011uWJB7R2robWzKnw2p_xrfR3HJqv_7qwxaqevjqyQVvEdWg3X-ReU1zH3xpbjeDrlYVYXUtAgFAEdMaWJhgwfAZiJkk9Buu9Fu8hg'
         });
     }
     SpotifyService.prototype.getNewReleases = function () {
